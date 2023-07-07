@@ -1,0 +1,95 @@
+.header {
+	/* position: absolute;  */
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	/* background-color: purple;  */
+	color: white;
+	/* height: 150px; */
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: rgb(210, 197, 219);
+	color: #000;
+	height: 40px;
+}
+
+#basic-navbar-nav {
+
+}
+
+.btn-custom {
+	color: #000;
+	font-weight: 600;
+	min-width: 150px;
+	background-color: #fff;
+}
+
+.mr-80 {
+	margin-right: 80px !important;
+}
+
+.btnlike {
+	border-radius: 5px;
+	width: 250px;
+	height: 36px;
+}
+
+.btnlike a::after {
+	display: none;
+}
+
+.nav-link {
+	color: #000 !important;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    width: inherit;
+    background-color: #4473c5;
+}
+
+.dropdown-item {
+    font-weight: 550;
+    font-size: 20px;
+}
+
+.navbar {
+	background-color: #4473c5;
+}
+
+.h-name {
+	color: #7e0404;
+	font-weight: 650;
+	font-size: 13px;
+}
+
+.h-designation {
+	color: #000;
+	font-weight: 550;
+	font-size: 12px;
+}
+
+.h-department {
+	color: #7cadd4;
+	font-weight: 650;
+	font-size: 13px;
+}
+.header-text-telugu {
+	color: #196eac;
+	font-weight: 700;
+	font-size: 26px;	
+}
+
+.header-text-english {
+	color: #bf1a1c;
+	font-weight: 700;
+	font-size: 26px;
+}
