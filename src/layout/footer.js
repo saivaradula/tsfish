@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className="footer">
-            Footer Component
+            Site designed and develeped by Cloud Guru.
         </div>
     )
 }

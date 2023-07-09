@@ -1,9 +1,13 @@
+.add-border-1 {
+	border: 1px solid #ccc;
+}
+
 .header {
 	/* position: absolute;  */
 	top: 0;
 	left: 0;
 	width: 100%;
-	text-align: center;
+	text-align: right;
 	/* background-color: purple;  */
 	color: white;
 	/* height: 150px; */
@@ -14,16 +18,38 @@
 	bottom: 0px;
 	left: 0;
 	width: 100%;
-	text-align: center;
+	text-align: right;
+	padding-top: 10px;
+	font-weight: 500;
 	background-color: rgb(210, 197, 219);
 	color: #000;
-	height: 40px;
+	height: 50px;
+}
+
+.minheight {
+	min-height: 450px;
+}
+
+.loginbox {
+	background-color: #4473c5;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+}
+
+.loginbox h4 {
+	color: #fff;
+	font-size: 28px;
+	margin-top: 20px;
+	border-bottom: 1px solid #ccc;
 }
 
 #basic-navbar-nav {
-
+	margin-left: 0px;
 }
-
+#basic-navbar-nav-login {
+	margin-left: -100px;
+}
 .btn-custom {
 	color: #000;
 	font-weight: 600;
@@ -47,18 +73,18 @@
 
 .nav-link {
 	color: #000 !important;
-    padding-top: 5px;
-    font-size: 18px;
+	padding-top: 5px;
+	font-size: 17px;
 }
 
 .dropdown-menu {
-    width: inherit;
-    background-color: #4473c5;
+	width: inherit;
+	background-color: #4473c5;
 }
 
 .dropdown-item {
-    font-weight: 550;
-    font-size: 20px;
+	font-weight: 550;
+	font-size: 20px;
 }
 
 .navbar {
@@ -85,11 +111,18 @@
 .header-text-telugu {
 	color: #196eac;
 	font-weight: 700;
-	font-size: 26px;	
+	font-size: 26px;
 }
 
 .header-text-english {
 	color: #bf1a1c;
 	font-weight: 700;
 	font-size: 26px;
+}
+
+table th,
+table td {
+	border: 1px solid #ccc;
+	height: 50px;
+	text-align: center;
 }

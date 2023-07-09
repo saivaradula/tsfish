@@ -2,7 +2,6 @@ import './layout.css'
 import Header from "./header/header";
 import ContentPage from "./content";
 import Footer from "./footer";
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const Layout = () => {
     return (

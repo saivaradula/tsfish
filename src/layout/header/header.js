@@ -20,6 +20,7 @@ const Header = () => {
             <div className="row col-md-12">
                 <NavigationButtons />
             </div>
+            <div className="row">&nbsp;</div>
         </div>
     )
 }
