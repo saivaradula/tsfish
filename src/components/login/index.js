@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import actions from '../../constants/actionTypes'
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 const LoginComponent = () => {
-
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const { isLoggedIn } = useSelector(state => state.auth);
 
@@ -40,6 +40,7 @@ const LoginComponent = () => {
                     type: actions.LOGIN_SUCCESS,
                     payload: { user: user }
                 });
+                navigate("/dashboard");
             } else {
                 loginFailed()
             }
@@ -51,7 +52,7 @@ const LoginComponent = () => {
     const handleSubmit = () => dispatch(() => login(username, password))
 
     if (isLoggedIn) {
-        <Navigate replace to="/home" />
+        navigate("/dashboard");
     }
 
     return (

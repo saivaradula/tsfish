@@ -10,7 +10,7 @@ const UCPage = () => {
             <main class="main">
                 <section class="contact">
                     <h1 class="title">Page Under Construction</h1>
-                    <h2 class="sub-title">Page is getting designed by Cloud Guru</h2>
+                    <h2 class="sub-title">Page is getting designed by <br /> SRR CloudExpertsGuru</h2>
                 </section>
             </main>
         </>
