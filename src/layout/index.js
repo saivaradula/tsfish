@@ -6,9 +6,9 @@ import Footer from "./footer";
 const Layout = () => {
     return (
         <>
-            <div className="row col-md-12 mb-4"><Header /></div>
-            <div className="row col-md-12"><ContentPage /></div>
-            <div className="row col-md-12"><Footer /></div>
+            <div><Header /></div>
+            <div><ContentPage /></div>
+            <div><Footer /></div>
         </>
     )
 }

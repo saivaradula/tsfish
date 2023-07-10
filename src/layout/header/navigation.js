@@ -1,93 +1,56 @@
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useSelector } from "react-redux";
 
 const NavigationButtons = () => {
     const { isLoggedIn } = useSelector(state => state.auth);
     return (
-        <Navbar data-bs-theme="dark">
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id={isLoggedIn ? 'basic-navbar-nav-login' : 'basic-navbar-nav'}>
-                    <Nav>
+        <nav id={isLoggedIn ? 'basic-navbar-nav-login' : 'basic-navbar-nav'} class="navbar navbar-expand-lg navbar-custom mt-3 mb-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         {
-                            isLoggedIn && <Navbar.Brand href="#/dashboard" className="mr-80">
-                                <button type="button"
-                                    className="btn btn-primary btn-custom">
-                                    Dashboard
-                                </button>
-                            </Navbar.Brand>
+                            isLoggedIn &&  <li class="nav-item">
+                            <a href="#/dashboard" class="nav-link active" aria-current="page">Dashboard</a>
+                        </li>
                         }
-
-                        <Navbar.Brand href="#/home" className="mr-80">
-                            <button type="button"
-                                className="btn btn-primary btn-custom">
-                                Home
-                            </button>
-                        </Navbar.Brand>
-
-                        <Navbar.Brand href="#/online" className="mr-80">
-                            <button type="button"
-                                className="btn btn-primary btn-custom">
-                                Online Services
-                            </button>
-                        </Navbar.Brand>
-
-                        <Navbar.Brand href="#" className="mr-80">
-                            <NavDropdown title="Society Registration"
-                                className="btn-primary btn-custom btnlike">
-                                <NavDropdown.Item href="#/registration/pfcs">
-                                    PFCS Registration
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/registration/fwcs">
-                                    FWCS Registration
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/registration/fmcs">
-                                    FMCS Registration
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/registration/lhcs">
-                                    LHCS Registration
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Navbar.Brand>
-
-                        <Navbar.Brand href="#" className="mr-80">
-                            <NavDropdown title="Member Registration"
-                                className="btn-primary btn-custom btnlike">
-                                <NavDropdown.Item href="#/member/pfcs">
-                                    Member Reg. for PFCS
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/member/fwcs">
-                                    Member Reg. for FWCS
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/member/fmcs">
-                                    Member Reg. for FMCS
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#/member/lhcs">
-                                    Member Reg. for LHCS
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Navbar.Brand>
-
-                        <Navbar.Brand href="#/contact">
-                            <button type="button"
-                                className="btn btn-primary btn-custom">
-                                Contact Us
-                            </button>
-                        </Navbar.Brand>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                        <li class="nav-item">
+                            <a class="nav-link active"aria-current="page" href="#/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#/online">Online Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Society Registration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#/registration/pfcs">PFCS Registration</a></li>
+                                <li><a class="dropdown-item" href="#/registration/fwcs">FWCS Registration</a></li>
+                                <li><a class="dropdown-item" href="#/registration/fmcs">FMCS Registration</a></li>
+                                <li><a class="dropdown-item" href="#/registration/lhcs">LHCS Registration</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Member Registration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#/member/pfcs">Member Reg. for PFCS</a></li>
+                                <li><a class="dropdown-item" href="#/member/fwcs">Member Reg. for FWCS</a></li>
+                                <li><a class="dropdown-item" href="#/member/fmcs">Member Reg. for FMCS</a></li>
+                                <li><a class="dropdown-item" href="#/member/lhcs">Member Reg. for LHCS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 }
 

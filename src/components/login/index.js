@@ -57,38 +57,19 @@ const LoginComponent = () => {
 
     return (
         <div className='row'>
-            <div className='col-md-12 loginbox'>
-                <div className='row col-md-12'>
-                    <h4>Login</h4>
+            <div className='col-md-12 loginbox mb-3'>
+                <h4>Login</h4>
+                <div className='mb-2'>
+                    <label>Username</label>
+                    <input type='text' onChange={e => setUserName(e.target.value)} className='form-control' />
                 </div>
-                <div>&nbsp;</div>
-                <div className='row'>
-                    <div className='col-md-1'></div>
-                    <div className='col-md-2 mt-2'>
-                        <label>Username:</label>
-                    </div>
-                    <div className='col-md-7'>
-                        <input type='text' onChange={e => setUserName(e.target.value)} className='form-control' />
-                    </div>
+                <div className='mb-3'>
+                    <label>Password</label>
+                    <input type='password' onChange={e => setPassword(e.target.value)} className='form-control' />
                 </div>
-                <div>&nbsp;</div>
-                <div className='row'>
-                    <div className='col-md-1'></div>
-                    <div className='col-md-2 mt-2'>
-                        <label>Password:</label>
-                    </div>
-                    <div className='col-md-7'>
-                        <input type='password' onChange={e => setPassword(e.target.value)} className='form-control' />
-                    </div>
+                <div className='text-center'>
+                    <button onClick={handleSubmit} className='border btn btn-secondary'>Submit</button>
                 </div>
-                <div>&nbsp;</div>
-                <div className='row'>
-                    <div className='col-md-6'></div>
-                    <div className='col-md-6'>
-                        <button onClick={handleSubmit} className='border btn btn-secondary'>Submit</button>
-                    </div>
-                </div>
-
             </div>
         </div>
     )

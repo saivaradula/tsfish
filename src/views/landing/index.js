@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const LandingPage = () => {
     const { isLoggedIn } = useSelector(state => state.auth);
     return (
-        <>
+        <div className="container">
             <div className="row">
                 <div className="col-md-4">
                     {!isLoggedIn && <LoginComponent />}
@@ -39,7 +39,7 @@ const LandingPage = () => {
                         of 27.14 lakh population comprising of fishermen communities who are organized into about 4000 Fishermen
                         societies with about 3 lakh members spread over the entire state.
                     </p>
-                    <div>
+                    <div className='mb-3'>
                         <h6>Vision</h6>
                         <ul>
                             <li>
@@ -58,7 +58,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
