@@ -23,13 +23,10 @@ const Dashboard = () => {
 
     return (
         <>
-            <div className="row">
-                <div className="col-md-11"></div>
-                <div className="col-md-1">
-                    <button onClick={logmeout}>Logout</button>
-                </div>
+            <div className='text-end'>
+                <button onClick={logmeout}>Logout</button>
             </div>
-            <div className="row">
+            <div>
                 <h6>DEVELOPMENT OF FISHERIES:</h6>
             </div>
             <span style={{ color: 'red', 'font-weight': '650' }}>Supply of fish seed & Prawn Juveniles on 100% grant:</span>
@@ -40,28 +37,28 @@ const Dashboard = () => {
             <span style={{ color: 'red', 'font-weight': '650' }}>
                 Stocking of Fish Seed – IFDS, NSP & TSP
             </span>
-            <div>&nbsp;</div>
-
-            <table style={{ margin: 'auto', width: '50%' }}>
-                <tr>
-                    <th>Year</th>
-                    <th>No. of water bodies</th>
-                    <th>Seed stocked (In crores)</th>
-                    <th>Expenditure (Rs. in crores)</th>
-                </tr>
-                <tr>
-                    <td>2016-17</td>
-                    <td>3,939</td>
-                    <td>27.85</td>
-                    <td>22.46</td>
-                </tr>
-                <tr>
-                    <td>2017-18</td>
-                    <td>11,067</td>
-                    <td>51.08</td>
-                    <td>44.08</td>
-                </tr>
-            </table>
+            <div className='table-style mt-2'>
+                <table className='mb-5'>
+                    <tr>
+                        <th>Year</th>
+                        <th>No. of water bodies</th>
+                        <th>Seed stocked (In crores)</th>
+                        <th>Expenditure (Rs. in crores)</th>
+                    </tr>
+                    <tr>
+                        <td>2016-17</td>
+                        <td>3,939</td>
+                        <td>27.85</td>
+                        <td>22.46</td>
+                    </tr>
+                    <tr>
+                        <td>2017-18</td>
+                        <td>11,067</td>
+                        <td>51.08</td>
+                        <td>44.08</td>
+                    </tr>
+                </table>
+            </div>
         </>
     )
 }

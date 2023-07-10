@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className="footer">
-            Site designed and develeped by SRR CloudExpertsGuru.
+            Site designed and developed by SRR CloudExpertsGuru.
         </div>
     )
 }
